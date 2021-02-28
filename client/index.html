@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>buylist</title>
+
+	<!-- Mobile -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+	</style>
+	<link media="all" rel="stylesheet" href="chota.min.css">
+	<link media="all" rel="stylesheet" href="styles.css">
+
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav class="nav hide-xs">
+				<div class="nav-left">
+					<a class="brand">buylist</a>
+				</div>
+				<div class="nav-right">
+					<a class="button outline">Настройки</a>
+					<a class="button outline" id="theme-switch" onclick="switchMode(this)">☀️</a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+		<section>
+			<nav class="tabs is-full">
+				<a class="active">Список покупок</a>
+				<a>Statistics</a>
+			</nav>
+		</section>
+
+		<p> </p>
+
+		<section>
+			<div class="card">
+				<p class="grouped">
+					<input type="text" name="itemName" placeholder="Название товара">
+					<button class="button primary">Добавить</button>
+				</p>
+			</div>
+		</section>
+
+		<section>
+			<div id="buyItems" class="">
+				<p class="itemLabel">
+					<button id="itemID-0" class="button clear is-full-width">Item Name</button>
+				</p>
+				<p class="itemLabel">
+					<button id="itemID-0" class="button clear is-full-width">Item Name</button>
+				</p>
+				<p class="itemLabel">
+					<button id="itemID-0" class="button clear is-full-width">Item Name</button>
+				</p>
+				<p class="itemLabel">
+					<button id="itemID-0" class="button clear is-full-width">Item Name</button>
+				</p>
+			</div>
+		</section>
+		</main>
+
+		<hr>
+		<footer class="text-center hide-xs">
+			<p class="text-grey is-marginless is-small">
+				by <a href="//iiiypuk.me/about/" target="_blank">iiiypuk</a>
+			</p>
+		</footer>
+	</div>
+
+	<script>
+	if (window.matchMedia &&
+		window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	  document.body.classList.add('dark');
+	  document.querySelector("#theme-switch").innerHTML = "🌙";
+	}
+
+	function switchMode(el) {
+		const bodyClass = document.body.classList;
+		bodyClass.contains("dark")
+			? ((el.innerHTML = "☀️"), bodyClass.remove("dark"))
+			: ((el.innerHTML = "🌙"), bodyClass.add("dark"));
+	}
+
+	</script>
+</body>
+</html>

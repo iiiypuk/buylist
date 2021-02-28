@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "chota": "^0.8.0"
+  },
+  "name": "buylist",
+  "description": "",
+  "version": "0.1.0",
+  "main": "client/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iiiypuk/buylist.git"
+  },
+  "author": "Alexander Popov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iiiypuk/buylist/issues"
+  },
+  "homepage": "https://github.com/iiiypuk/buylist#readme"
+}
